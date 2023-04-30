@@ -1,16 +1,7 @@
 import { getSubtitles } from 'youtube-captions-scraper'
 
 export default async function (req, res) {
-  const videoId = req.query.videoId
-
-  if (!videoId) {
-    res.status(400).json({
-      error: {
-        message: 'Please provide a valid video ID',
-      },
-    })
-    return
-  }
+  const videoId = 'GvX-heRWFfA'
 
   try {
     const subtitles = await getSubtitles({ videoID: videoId })
